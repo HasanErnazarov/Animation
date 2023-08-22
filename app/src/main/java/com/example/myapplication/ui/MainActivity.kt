@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initviews() {
+        
         val imageview = findViewById<ImageView>(R.id.iv_jpg)
         val anim = findViewById<ImageView>(R.id.la_anim1)
         val zoomB = findViewById<Button>(R.id.bt_zoom)
@@ -66,17 +67,17 @@ class MainActivity : AppCompatActivity() {
             imageview.startAnimation(slideIn)
         }
 
-        bounceB.setOnClickListener{
+        bounceB.setOnClickListener {
             val bounceIn = AnimationUtils.loadAnimation(this, R.anim.anim_bounce_in)
             imageview.startAnimation(bounceIn)
         }
 
-        sequenB.setOnClickListener{
+        sequenB.setOnClickListener {
             val sequntialIn = AnimationUtils.loadAnimation(this, R.anim.anim_sequential_in)
             imageview.startAnimation(sequntialIn)
         }
 
-        togatherB.setOnClickListener{
+        togatherB.setOnClickListener {
             val togatherB = AnimationUtils.loadAnimation(this, R.anim.anim_togather_in)
             imageview.startAnimation(togatherB)
         }
@@ -91,6 +92,9 @@ class MainActivity : AppCompatActivity() {
 
         nextAnim.setOnClickListener {
             lavLoading.setAnimation("loading2.json")
+            lavLoading.setAnimation("facebook.json")
+            lavLoading.setAnimation("youtube.json")
+            lavLoading.setAnimation("twitter.json")
             lavLoading.playAnimation()
         }
 
@@ -99,5 +103,26 @@ class MainActivity : AppCompatActivity() {
             lavLoading.playAnimation()
         }
 
+        prevAnim.setOnClickListener {
+            lavLoading.setAnimation("loading2.json")
+            lavLoading.playAnimation()
+        }
+
+
+        prevAnim.setOnClickListener {
+            lavLoading.setAnimation("facebook.json")
+            lavLoading.playAnimation()
+        }
+
+        prevAnim.setOnClickListener {
+            lavLoading.setAnimation("youtube.json")
+            lavLoading.playAnimation()
+        }
+
+        prevAnim.setOnClickListener {
+            lavLoading.setAnimation("twitter.json")
+            lavLoading.playAnimation()
+
+        }
     }
 }
