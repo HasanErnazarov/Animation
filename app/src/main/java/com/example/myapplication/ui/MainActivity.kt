@@ -68,14 +68,17 @@ class MainActivity : AppCompatActivity() {
 
         bounceB.setOnClickListener{
             val bounceIn = AnimationUtils.loadAnimation(this, R.anim.anim_bounce_in)
+            imageview.startAnimation(bounceIn)
         }
 
         sequenB.setOnClickListener{
             val sequntialIn = AnimationUtils.loadAnimation(this, R.anim.anim_sequential_in)
+            imageview.startAnimation(sequntialIn)
         }
 
         togatherB.setOnClickListener{
             val togatherB = AnimationUtils.loadAnimation(this, R.anim.anim_togather_in)
+            imageview.startAnimation(togatherB)
         }
 
         pausa.setOnClickListener {
