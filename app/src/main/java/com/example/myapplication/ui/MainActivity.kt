@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         val blinkB = findViewById<Button>(R.id.bt_blink)
         val moveB = findViewById<Button>(R.id.bt_move)
         val slideB = findViewById<Button>(R.id.bt_slide)
+        val bounceB = findViewById<Button>(R.id.bt_bounce)
+        val sequenB = findViewById<Button>(R.id.bt_sequential)
+        val togatherB = findViewById<Button>(R.id.bt_togather)
+
         val lavLoading = findViewById<LottieAnimationView>(R.id.la_anim1)
         val play = findViewById<Button>(R.id.bt_play)
         val pausa = findViewById<Button>(R.id.bt_pause)
@@ -60,6 +64,18 @@ class MainActivity : AppCompatActivity() {
         slideB.setOnClickListener {
             val slideIn = AnimationUtils.loadAnimation(this, R.anim.anim_slide_in)
             imageview.startAnimation(slideIn)
+        }
+
+        bounceB.setOnClickListener{
+            val bounceIn = AnimationUtils.loadAnimation(this, R.anim.anim_bounce_in)
+        }
+
+        sequenB.setOnClickListener{
+            val sequntialIn = AnimationUtils.loadAnimation(this, R.anim.anim_sequential_in)
+        }
+
+        togatherB.setOnClickListener{
+            val togatherB = AnimationUtils.loadAnimation(this, R.anim.anim_togather_in)
         }
 
         pausa.setOnClickListener {
